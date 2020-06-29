@@ -6,7 +6,9 @@ module.exports = {
   },
   extends: [
     'plugin:react/recommended',
-    'standard'
+    'standard',
+    'prettier',
+    'prettier/react'
   ],
   globals: {
     Atomics: 'readonly',
@@ -19,9 +21,9 @@ module.exports = {
     ecmaVersion: 2018,
     sourceType: 'module'
   },
-  plugins: [
-    'react'
-  ],
+  plugins: 
+  ['react', 'prettier'],
   rules: {
+    'prettier/prettier': ['error']
   }
 }
